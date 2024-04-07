@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { ReactTable } from "../../components/ReactTable";
 import Sidebar1 from "../../components/Sidebar1";
 import { CloseIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 import {
   Button,
   Flex,
@@ -18,29 +19,33 @@ import {
 import { createColumnHelper } from "@tanstack/react-table";
 
 const tableData = [
-  { ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied", viewone: "Personalize", viewtwo: "View details" },
   {
+    id: 1,
     name: "Matthew Martinez",
-    ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied",
+    email: "matt@gmail.com",
+    lastcontacted: "20th June",
+    ainotes: "Buyer wants a 3 bedroom house and hasn't replied.",
     viewone: "Personalize",
     viewtwo: "View details",
   },
   {
-    email: "elizabeth_hall_1998@gmail.com",
-    ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied",
-    viewone: "Personalize",
-    viewtwo: "View details",
-  },
-  { ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied", viewone: "Personalize", viewtwo: "View details" },
-  {
+    id: 2,
     name: "Elizabeth Watson",
-    ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied",
+    email: "elizabeth@gmail.com",
+    lastcontacted: "26th June",
+    ainotes: "Buyer wants a 7 bedroom house and hasn't replied.",
     viewone: "Personalize",
     viewtwo: "View details",
   },
-  { ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied", viewone: "Personalize", viewtwo: "View details" },
-  { ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied", viewone: "Personalize", viewtwo: "View details" },
-  { ainotes: "Buyer wannts a 3 bedromm hourse and hasn\\'t repltied", viewone: "Personalize", viewtwo: "View details" },
+  {
+    id: 3,
+    name: "Max Payne",
+    email: "max@gmail.com",
+    lastcontacted: "29th June",
+    ainotes: "Buyer wants a 22 bedroom house and hasn't replied.",
+    viewone: "Personalize",
+    viewtwo: "View details",
+  },
 ];
 
 export default function OverviewpagePage() {
@@ -60,9 +65,7 @@ export default function OverviewpagePage() {
             borderBottomWidth="0.5px"
             borderStyle="solid"
             bg="gray.50_01"
-            justifyContent="center"
             display="flex"
-            alignItems="center"
             h="62px"
             py={{ base: "20px", sm: "22px" }}
           >
@@ -83,7 +86,6 @@ export default function OverviewpagePage() {
             borderBottomWidth="0.5px"
             borderStyle="solid"
             bg="gray.50_01"
-            justifyContent="center"
             display="flex"
             alignItems="center"
             h="62px"
@@ -106,7 +108,6 @@ export default function OverviewpagePage() {
             borderBottomWidth="0.5px"
             borderStyle="solid"
             bg="gray.50_01"
-            justifyContent="center"
             display="flex"
             alignItems="center"
             h="62px"
@@ -142,7 +143,6 @@ export default function OverviewpagePage() {
             borderBottomWidth="0.5px"
             borderStyle="solid"
             bg="gray.50_01"
-            justifyContent="center"
             display="flex"
             alignItems="center"
             h="62px"
@@ -186,11 +186,10 @@ export default function OverviewpagePage() {
             borderStyle="solid"
             bg="white.A700"
             flex={1}
-            justifyContent="center"
             alignSelf="stretch"
           >
-            <Button minW="101px" borderRadius="4px">
-              {info?.getValue?.()}
+            <Button minW="101px" borderRadius="4px" onClick={()=> window.location.href = `/chat/${info.getValue()}`}>
+              View details
             </Button>
           </Flex>
         ),
@@ -253,14 +252,9 @@ export default function OverviewpagePage() {
                     <Box h="4px" bg="deep_purple.A400" alignSelf="stretch" w="100%" />
                   </Flex>
                   <Text mb="14px" alignSelf="end">
-                    Campaigns
+                    Knowledge
                   </Text>
                 </Flex>
-                <Text mb="14px" alignSelf="end">
-                  Knowledge
-                </Text>
-                <Text>Menu item</Text>
-                <Text>Menu item</Text>
               </Flex>
               <Flex w={{ md: "12%", base: "100%" }} justifyContent="space-between" alignItems="center" gap="20px">
                 <Flex flexDirection="column" alignItems="start">

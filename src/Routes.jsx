@@ -4,12 +4,12 @@ import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 import Overviewpage from "pages/Overviewpage";
 
-const ProjectRoutes = () => {
+export const Routes = () => {
   let element = useRoutes([
     { path: "/", element: <Home /> },
     { path: "*", element: <NotFound /> },
     {
-      path: "overviewpage",
+      path: "overview-page",
       element: <Overviewpage />,
     },
   ]);
@@ -17,4 +17,4 @@ const ProjectRoutes = () => {
   return element;
 };
 
-export default ProjectRoutes;
+
