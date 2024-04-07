@@ -16,7 +16,7 @@ const sizes = {
     tbody: {
       tr: {
         td: {
-          p: "12px",
+          p: "20px",
         },
       },
     },

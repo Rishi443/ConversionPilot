@@ -1,4 +1,4 @@
-## conversion_pilot_v1
+## conversion_pilot_mvp
 
 Generated with ❤️ from [DhiWise](https://www.dhiwise.com)
 
@@ -6,7 +6,7 @@ Generated with ❤️ from [DhiWise](https://www.dhiwise.com)
 
 - This React application is built using [create-react-app](https://create-react-app.dev/).
 - It uses [Chakra UI](https://chakra-ui.com/)
-- The application is generated in JavaScript.
+- The application is generated in [TypeScript](https://www.typescriptlang.org/).
 
 ## Pre-requisites
 
@@ -39,26 +39,26 @@ This file contains various environment variables that you can configure.
 │   └── robots.txt
 ├── README.md
 └── src
-    ├── App.jsx
+    ├── App.tsx
     ├── components --------- UI and Detected Common Components
     ├── constants ---------- Project constants
     ├── theme --------- Theme configuration
     │   └── components ----- Component style
     │   └── foundations ---- Base styles
     ├── hooks -------------- Helpful Hooks
-    ├── index.jsx
+    ├── index.tsx
     ├── pages -------------- All route pages
-    ├── Routes.jsx ---------- Routing
+    ├── Routes.tsx ---------- Routing
     ├── styles
     │   └── index.css ------ Other Global Styles
     └── util
-        └── index.jsx ------- Helpful utils
+        └── index.tsx ------- Helpful utils
 ```
 
 For the project to build, **these files must exist with exact filenames**:
 
 - `public/index.html` is the page template;
-- `src/index.jsx` is the JavaScript entry point.
+- `src/index.tsx` is the TypeScript entry point.
 
 You may create subdirectories inside src.
 

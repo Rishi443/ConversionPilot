@@ -1,8 +1,13 @@
 import React from "react";
-import { Image, Text, Flex, Box } from "@chakra-ui/react";
+import { ChakraProps } from "@chakra-ui/react";
+import { Image, Box } from "@chakra-ui/react";
 import { MenuItem, Menu, Sidebar } from "react-pro-sidebar";
 
-export default function Sidebar1({ ...props }) {
+interface Props extends ChakraProps {
+  className?: string;
+}
+
+export default function SideNavBar({ ...props }: Props) {
   const [collapsed, setCollapsed] = React.useState(false);
 
   //use this function to collapse/expand the sidebar
@@ -12,7 +17,6 @@ export default function Sidebar1({ ...props }) {
 
   return (
     <Box {...props} width="256px !important" collapsedWidth="80px !important" collapsed={collapsed} as={Sidebar}>
-      <Image src="images/img_image_15.svg" h="32px" ml={{ md: "20px", base: "0px" }} w="40%" borderRadius="4px" />
       <Box
         menuItemStyles={{
           button: {
@@ -26,7 +30,7 @@ export default function Sidebar1({ ...props }) {
           },
         }}
         as={Menu}
-        mt="79px"
+        mt="93px"
         alignSelf="stretch"
         display="flex"
         flexDirection="column"
@@ -34,22 +38,9 @@ export default function Sidebar1({ ...props }) {
       >
         <MenuItem icon={<Image src="images/img_home.svg" h="24px" w="24px" />}>Active Leads </MenuItem>
         <MenuItem icon={<Image src="images/img_home_gray_700.svg" h="24px" w="24px" />}>Buyers</MenuItem>
+        <MenuItem icon={<Image src="images/img_home_gray_700.svg" h="24px" w="24px" />}>Menu item</MenuItem>
       </Box>
-      {!collapsed ? (
-        <Flex
-          mt="643px"
-          mb="7px"
-          mr={{ md: "20px", base: "0px" }}
-          alignSelf="end"
-          w="68%"
-          justifyContent="space-between"
-          alignItems="start"
-          gap="20px"
-        >
-          <Text size="xs">View profile</Text>
-          <Image src="images/img_search.svg" h="24px" mb="10px" w="24px" />
-        </Flex>
-      ) : null}
+      {!collapsed ? <Image src="images/img_search.svg" h="24px" ml={{ md: "17px", base: "0px" }} w="24px" /> : null}
     </Box>
   );
 }

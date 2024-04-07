@@ -1,8 +1,22 @@
 @font-face {
   font-display: swap;
   font-style: normal;
+  src: url("/public/fonts/ManropeBold.ttf");
+  font-family: "Manrope";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
   src: url("/public/fonts/ManropeRegular.ttf");
   font-family: "Manrope";
+  font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/LexendRegular.ttf");
+  font-family: "Lexend";
   font-weight: 400;
 }
 @font-face {
@@ -11,18 +25,4 @@
   src: url("/public/fonts/LexendBold.ttf");
   font-family: "Lexend";
   font-weight: 700;
-}
-@font-face {
-  font-display: swap;
-  font-style: normal;
-  src: url("/public/fonts/ManropeBold.ttf");
-  font-family: "Manrope";
-  font-weight: 700;
-}
-@font-face {
-  font-display: swap;
-  font-style: normal;
-  src: url("/public/fonts/LexendRegular.ttf");
-  font-family: "Lexend";
-  font-weight: 400;
 }

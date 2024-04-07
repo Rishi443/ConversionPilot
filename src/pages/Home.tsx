@@ -17,6 +17,11 @@ const Home = () => {
             Overviewpage
           </Link>
         </li>
+        <li style={{ marginBottom: "10px" }}>
+          <Link to="/knowledge" style={{ color: "#87CEFA", textDecoration: "none" }}>
+            Knowledge
+          </Link>
+        </li>
       </ul>
     </div>
   );

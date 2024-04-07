@@ -1,8 +1,12 @@
 const baseStyle = {
-  color: "deep_purple.A400",
+  color: "gray.900_01",
   fontFamily: "Manrope",
 };
 const sizes = {
+  s: {
+    fontSize: '{"md":"23px","base":"23px","sm":"21px"}',
+    fontWeight: 700,
+  },
   xs: {
     fontSize: "14px",
     fontWeight: 700,

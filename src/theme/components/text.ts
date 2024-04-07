@@ -1,10 +1,10 @@
 const baseStyle = {
-  color: "gray.700",
+  color: "gray.900_01",
   fontFamily: "Manrope",
 };
 const sizes = {
   xs: {
-    fontSize: "11px",
+    fontSize: "12px",
     fontWeight: 400,
   },
   s: {
